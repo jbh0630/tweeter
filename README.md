@@ -13,8 +13,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot of URLs page"]()
-!["screenshot of register page"]()
+!["screenshot of tweet-box"](https://github.com/jbh0630/tweeter/blob/master/docs/tweet-box.png)
+!["screenshot of tweets"](https://github.com/jbh0630/tweeter/blob/master/docs/tweets.png)
 
 
 ## Dependencies
