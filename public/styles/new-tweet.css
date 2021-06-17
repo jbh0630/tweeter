@@ -1,0 +1,134 @@
+.new-tweet {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  width: 100%;
+}
+
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Sans Pro";
+}
+
+.new-tweet form div {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee";
+}
+
+.new-tweet form div button {
+  color: #ffff;
+  background-color: #4056A1;
+}
+
+.new-tweet form textarea {
+  outline: 0;
+  border-width: 0px 0 thick;
+  border-color: #000000;
+  resize: none;
+  margin-top: 15px;
+  background: transparent;
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+}
+
+.alertMessage {
+  margin-top: 50px;
+  border: thick solid #ff0000;
+}
+
+.alertMessage div {
+  font-family: "Source Sans Pro";
+  font-size: 30px;
+  color: #ff0000;
+  margin: 20px 40px 20px;
+}
+
+.tweet {
+  border: thick solid #000000;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px #a4b1db;
+}
+
+.tweet header {
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar-name img {
+  width: 60px;
+  height: 60px;
+  margin: 10px 0px 10px;
+}
+
+.avatar-name span {
+  margin: 26px 20px 26px;
+  font-family: "Source Sans Pro";
+  font-size: larger;
+}
+
+.user-handle span {
+  color: #a4b1db;
+  font-family: "Source Sans Pro";
+  font-size: larger;
+  font-weight: bold;
+}
+
+.tweet textarea {
+  outline: 0;
+  border-width: 0px 0 thick;
+  border-color: #000000;
+  resize: none;
+  background: transparent;
+  width: 98%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Source Sans Pro";
+  font-size: larger;
+  font-weight: 800;
+}
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.tweet footer div {
+  color: #4056A1;
+}
+
+.tweet footer div .fa-flag:hover {
+  color: #b36b00;
+}
+
+.tweet footer div .fa-retweet:hover {
+  color: #b36b00;
+}
+
+.tweet footer div .fa-heart:hover {
+  color: #b36b00;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    float: right;
+    margin: 9em 3em 3em;
+    width: 50%;
+    height: auto;
+  }
+}

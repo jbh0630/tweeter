@@ -1,0 +1,46 @@
+.top-nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  padding: 0 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.top-nav .title {
+  font-family: 'Bungee';
+}
+
+.top-nav .write-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+.fa-angle-double-down {
+  position: relative;
+}
+
+.fa-angle-double-down {
+  color: red;
+}
+
+.write-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1024px) {
+  .top-nav {
+    background-color: orange;
+    position: fixed;
+  }
+}
+
