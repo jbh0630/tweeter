@@ -57,7 +57,6 @@ $(document).ready(function() {
           );
           return;
         }
-        
         $('html').animate({
           scrollTop: $('h2').offset().top
         },800
@@ -78,13 +77,7 @@ $(document).ready(function() {
     $('html').animate({
       scrollTop: $('html').offset().top
     },800
-    );
-
-
-      
-      
-    
-    
+    );    
   });
 
   $('.fa-arrow-circle-up').hide();
