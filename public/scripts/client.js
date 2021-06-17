@@ -47,17 +47,44 @@ $(document).ready(function() {
   });
   
   $('.write-container').click(function() {
-    if ($(document).scrollTop() < 630) {
+    if ($(window).width() < 1024) {
+      if ($(document).scrollTop() < 630) {
+        console.log($(document).scrollTop());
+    
+          $('html').animate({
+            scrollTop: $('#tweet-text').offset().top
+          },800
+          );
+          return;
+        }
+        
+        $('html').animate({
+          scrollTop: $('h2').offset().top
+        },800
+        );
+        return;
+    }
+
+    if ($(document).scrollTop() < 330) {
+      console.log($(document).scrollTop());
+  
       $('html').animate({
         scrollTop: $('#tweet-text').offset().top
       },800
       );
       return;
-    }
+    } 
+      
     $('html').animate({
-      scrollTop: $('h2').offset().top
+      scrollTop: $('html').offset().top
     },800
     );
+
+
+      
+      
+    
+    
   });
 
   $('.fa-arrow-circle-up').hide();
