@@ -5,17 +5,17 @@
  */
 
 $(document).ready(function() {
-
+  //Rendering tweet app
   const renderTweets = function(tweets) {
     $('#tweets-container').empty();
     for (const data of tweets) {
-      let tweet = createTweetElement(data);
+      const tweet = createTweetElement(data);
       $('#tweets-container').prepend(tweet);
     }
   }
-
+  //Creating tweets 
   const createTweetElement = function(tweet) {
-    let $tweet = $(
+    const $tweet = $(
       `<article class="tweet">
         <header>
         <div class="avatar-name">
@@ -40,17 +40,17 @@ $(document).ready(function() {
 
     return $tweet;
   }
-
+  //Animation of arrow
   $(function arrowAnimation() {
     $('.fa-angle-double-down').animate({top: '15'}, 700, null);
     $('.fa-angle-double-down').animate({top: '0'}, 700, arrowAnimation);
   });
   
+  //Write a new tweet click function 
+  //(if the user click it, navigate to tweets. Reclick it, navigate to compose tweet)
   $('.write-container').click(function() {
     if ($(window).width() < 1024) {
       if ($(document).scrollTop() < 630) {
-        console.log($(document).scrollTop());
-    
           $('html').animate({
             scrollTop: $('#tweet-text').offset().top
           },800
@@ -65,21 +65,20 @@ $(document).ready(function() {
     }
 
     if ($(document).scrollTop() < 330) {
-      console.log($(document).scrollTop());
-  
       $('html').animate({
         scrollTop: $('#tweet-text').offset().top
       },800
       );
       return;
     } 
-      
     $('html').animate({
       scrollTop: $('html').offset().top
     },800
     );    
   });
 
+  //If user scroll down the page, the button will appear 
+  //and navigate to the top of the page when user click the circle arrow
   $('.fa-arrow-circle-up').hide();
   $(window).scroll(function() {
     if ($(this).scrollTop() > 0) {
@@ -96,9 +95,10 @@ $(document).ready(function() {
     return false;
   });
 
+  //When user tweet invalid value, alert message will appear
   const alertHandler = function(message) {
     $('.alertMessage').remove();
-    let $alert = $(
+    const $alert = $(
       `<div class="alertMessage">
         <div>
           <i class="fas fa-exclamation-triangle"></i>
@@ -112,6 +112,7 @@ $(document).ready(function() {
     $('.alertMessage').slideDown();
   }
 
+  //Form control
   $('form').submit(function(event) {
     event.preventDefault();
 
@@ -138,6 +139,7 @@ $(document).ready(function() {
 
   });
 
+  //Load all the tweets when the app started
   const loadTweets = function() {
     $.ajax({
       url: '/tweets',
