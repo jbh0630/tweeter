@@ -44,7 +44,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-
   .body > div {
     width: 50%;
   }
