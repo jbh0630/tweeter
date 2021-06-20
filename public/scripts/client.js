@@ -46,31 +46,15 @@ $(document).ready(function() {
     $('.fa-angle-double-down').animate({top: '0'}, 700, arrowAnimation);
   });
   
-  //Write a new tweet click function 
-  //(if the user click it, navigate to tweets. Reclick it, navigate to compose tweet)
+  //Write a new tweet click function (navigate to compose tweet in any size)
   $('.write-container').click(function() {
     if ($(window).width() < 1024) {
-      if ($(document).scrollTop() < 630) {
-          $('html').animate({
-            scrollTop: $('#tweet-text').offset().top
-          },800
-          );
-          return;
-        }
-        $('html').animate({
-          scrollTop: $('h2').offset().top
-        },800
-        );
-        return;
+    $('html').animate({
+      scrollTop: $('h2').offset().top
+    },800
+    );
+    return;
     }
-
-    if ($(document).scrollTop() < 330) {
-      $('html').animate({
-        scrollTop: $('#tweet-text').offset().top
-      },800
-      );
-      return;
-    } 
     $('html').animate({
       scrollTop: $('html').offset().top
     },800
